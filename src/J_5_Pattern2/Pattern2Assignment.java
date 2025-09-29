@@ -126,9 +126,49 @@ public class Pattern2Assignment {
         }
     }
 
+    /*
+    Problem statement
+        Write a program to print the pattern for the given N number of rows.
+
+        For N = 4
+        1357
+        3571
+        5713
+        7135
+        Detailed explanation ( Input/output format, Notes, Images )
+        Constraints :
+        0 <= N <= 50
+        Sample Input 1 :
+        3
+        Sample Output 1 :
+        135
+        351
+        513
+        Sample Input 2 :
+         5
+        Sample Output 2 :
+        13579
+        35791
+        57913
+        79135
+        91357
+     */
+    public static void oddSquare(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = i-1; j < n; j++) {
+                System.out.print(j * 2 + 1);
+            }
+            for (int k = 0; k < i - 1; k++) {
+                System.out.print(k * 2 + 1);
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
 //        halfDiamondPattern(5);
 //        parallelogramPattern(5);
-        sumPattern(5);
+//        sumPattern(5);
+        oddSquare(5);
     }
 }
